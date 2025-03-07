@@ -12,14 +12,14 @@ export default function Home() {
           href={"/"}
           className="flex space-x-2 items-center text-lg font-extrabold tracking-tighter hover:cursor-pointer"
         >
-          <div className="h-7 w-7 rounded-sm outline outline-offset-1 outline-black/50">
+          <div className="h-8 w-8">
             <Image src={logoImg} alt="logo" />
           </div>
           <span>TRACAREER</span>
         </Link>
         <Link
           href={"#"}
-          className="text-sm border py-1 px-2 rounded-sm hover:bg-black hover:text-white"
+          className="text-sm border rounded py-1 px-2 hover:bg-black hover:text-white"
         >
           SIGN IN
         </Link>
@@ -39,7 +39,7 @@ export default function Home() {
                   <div className="text-4xl sm:text-6xl lg:text-7xl -rotate-2 flex flex-col space-y-3">
                     <h1>Track Your</h1>
                     <h1>Applications with</h1>
-                    <h1 className="w-fit bg-gradient-to-r from-green-300 to-pink-300">
+                    <h1 className="w-fit px-5 sm:px-10 bg-gradient-to-r from-green-300 to-pink-300">
                       Tracareer !
                     </h1>
                   </div>
