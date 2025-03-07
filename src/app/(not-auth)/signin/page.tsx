@@ -1,1 +1,3 @@
-export default function SignInPage() {}
+export default function SignInPage() {
+  return <div>Sign in</div>;
+}
