@@ -1,24 +1,24 @@
-import { createClient } from "@/utils/supabase/server";
-import { redirect } from "next/navigation";
+import SignOutButton from "@/components/auth/sign-out-button";
+import { Suspense } from "react";
+import Trackers from "@/components/workspace/trackers";
 
 export default function MyWorkspacePage() {
-  async function signOut() {
-    "use server";
-    const supabase = await createClient();
-    await supabase.auth.signOut();
-
-    redirect("/signin");
-  }
-
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
-      <h1>WORKSPACE PAGE</h1>
-      <button
-        onClick={signOut}
-        className="border py-2 px-6 rounded-xl bg-black text-white"
+    <div className="h-screen flex flex-col gap-10 items-center justify-center">
+      <div className="flex items-center space-x-5">
+        <h1>WORKSPACE PAGE</h1>
+        <div className="border py-2 px-6 rounded-xl bg-black text-white">
+          <SignOutButton />
+        </div>
+      </div>
+
+      <Suspense
+        fallback={
+          <div className="text-xl font-extrabold">Trackers Skeleton</div>
+        }
       >
-        Sign Out
-      </button>
+        <Trackers />
+      </Suspense>
     </div>
   );
 }

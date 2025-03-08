@@ -19,6 +19,10 @@ export default function SignInPage() {
       },
     });
 
+    if (error) {
+      redirect("/error");
+    }
+
     if (data.url) {
       redirect(data.url);
     }
