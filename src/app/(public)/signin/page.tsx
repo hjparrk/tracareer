@@ -20,6 +20,7 @@ export default function SignInPage() {
     });
 
     if (error) {
+      console.log(error);
       redirect("/error");
     }
 
