@@ -16,7 +16,7 @@ export default function SignInPage() {
       provider: "github",
       options: {
         redirectTo:
-          "https://tracareer-lngjau2vo-hjparrks-projects.vercel.app/auth/callback",
+          "https://tracareer-git-auth-hjparrks-projects.vercel.app/auth/callback",
       },
     });
 
