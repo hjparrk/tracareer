@@ -15,7 +15,8 @@ export default function SignInPage() {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "github",
       options: {
-        redirectTo: "http://localhost:3000/auth/callback",
+        redirectTo:
+          "https://tracareer-lngjau2vo-hjparrks-projects.vercel.app/auth/callback",
       },
     });
 
