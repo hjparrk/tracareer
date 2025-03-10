@@ -8,8 +8,12 @@ import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 
 export default function SignInPage() {
+  console.log("test log");
+
   async function signInWithGithub() {
     "use server";
+
+    console.log("NEXT_PUBLIC_BASE_URL : ", process.env.NEXT_PUBLIC_BASE_URL);
 
     const supabase = await createClient();
     const { data, error } = await supabase.auth.signInWithOAuth({
