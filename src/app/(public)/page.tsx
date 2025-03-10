@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import heroImg from "../../public/hero-img.png";
-import logoImg from "../../public/logo.svg";
+import heroImg from "../../../public/hero-img.png";
+import logoImg from "../../../public/logo.svg";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
           <span>TRACAREER</span>
         </Link>
         <Link
-          href={"#"}
+          href={"/signin"}
           className="text-sm border rounded py-1 px-2 hover:bg-black hover:text-white"
         >
           SIGN IN
@@ -52,7 +52,7 @@ export default function Home() {
               </div>
 
               <Link
-                href={"/"}
+                href={"/signin"}
                 className="w-fit text-white py-2 px-4 text-sm sm:text-base bg-black rounded hover:bg-gradient-to-r hover:from-green-500 hover:to-pink-500 hover:text-black/80 font-bold"
               >
                 Create My Tracker
